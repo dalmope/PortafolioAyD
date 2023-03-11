@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Agenda de citas",
+    description:
+      "El software contara con una agenda de citas que permitira programar y visualizar las citas de los pacientes.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Historia clínica electrónica",
+    description:
+      "La historia clínica electrónica permitira a los médicos y personal médico tener acceso a la información del paciente de manera rápida y sencilla.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Facturación y gestión de pagos",
+    description:
+      "El software contara con un módulo de facturación que permita generar facturas para los pacientes y para las aseguradoras, así como registrar los pagos realizados.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Gestión de inventario y suministros médicos",
+    description:
+      " El software permitira llevar un registro del inventario de suministros y medicamentos de la clínica.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "Informes y estadísticas",
+    description:
+      "El software contara con herramientas de generación de informes y estadísticas que permitan al personal médico y administrativo obtener información relevante sobre el funcionamiento de la clínica.",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Seguridad y privacidad de datos",
+    description:
+      "El software contara con medidas de seguridad para garantizar la privacidad y confidencialidad de la información médica de los pacientes.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Todo lo que estamos preparando para ti
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Lo necesario para garantizar su eficacia y eficiencia en la gestión de la clínica:
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
