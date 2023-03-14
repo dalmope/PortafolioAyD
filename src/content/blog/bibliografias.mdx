@@ -1,0 +1,59 @@
+---
+draft: false
+title: "Referencias Bibliograficas"
+snippet: "Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat"
+publishDate: "2023-03-10 11:00"
+image: {
+  src: "https://cdn.pixabay.com/photo/2020/01/28/12/11/books-4799614_1280.jpg",
+  alt: "typography"
+}
+category: "Primera Semana"
+author: "David A. Mora"
+tags: [Contexto del desarrollo de sistemas]
+---
+
+
+import Button from "@components/ui/button.astro";
+import Pricing from "@components/bannertree.astro";
+
+export const pricing = [
+  {
+    price: "Jesus Acevedo",
+    popular: true,
+    features: [],
+    button: {
+      text: "Revisar",
+      link: "#",
+    },
+    backgroundImageUrl: "#",
+  },
+  {
+    price: "David Mora",
+    popular: true,
+    features: [],
+    button: {
+      text: "Revisar",
+      link: "/trabajos/semana1/DavidMora.pdf",
+    },
+    backgroundImageUrl: "/trabajos/semana1/DavidMora.png",
+  },
+  {
+    name: "Enterprise",
+    price: "Brayan Rodriguez",
+    popular: true,
+    features: [],
+    button: {
+      text: "Revisar",
+      link: "/trabajos/semana1/BrayanRodriguez.pdf",
+    },
+    backgroundImageUrl: "/trabajos/semana1/BrayanRodriguez.png",
+  },
+];
+
+## <a name="Headings"></a>Trabajo Independiente
+
+Visitar virtual a la Biblioteca Eduardo Cote Lamus (levantar información, libros actualizados en Ingles y en Español de los últimos ocho años existentes en la biblioteca). Realizar una ficha bibliográfica aplicando NORMA APA ultima versión ( ejercicio individual) enviarse al finalizar la primera semana de clases  a: aydufps@gmail.com
+
+<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+    {pricing.map((item) => <Pricing users={item} />)}
+</div>

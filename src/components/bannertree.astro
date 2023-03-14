@@ -1,0 +1,44 @@
+---
+import { Tick } from "@components/ui/icons";
+import Link from "@components/ui/link.astro";
+
+const { users } = Astro.props;
+---
+
+<div>
+  <div
+    class="flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-5 px-6 rounded-md"
+    style={
+    { backgroundImage: `url(${users?.backgroundImageUrl})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+    }}>
+    <div class="text-center">
+    <p
+        class="mt-3 text-4xl font-bold text-black md:text-4xl">
+        {
+          users.price && typeof users.price === "object"
+            ? users.price.monthly
+            : users.price
+        }
+      </p>
+    </div><ul class="grid mt-8 text-left gap-y-4">
+      {
+        users.features.map((item) => (
+          <li class="flex items-start gap-3 text-gray-800">
+            <Tick class="w-6 h-6" />
+            <span>{item}</span>
+          </li>
+        ))
+      }
+    </ul><div class="flex mt-8">
+      <Link
+        href={users.button.link || "#"}
+        block
+        style={users.popular ? "primary" : "outline"}>
+        {users.button.text || "Get Started"}
+      </Link>
+    </div>
+  </div>
+</div>
