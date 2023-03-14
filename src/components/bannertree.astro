@@ -36,7 +36,8 @@ const { users } = Astro.props;
       <Link
         href={users.button.link || "#"}
         block
-        style={users.popular ? "primary" : "outline"}>
+        style={users.popular ? "primary" : "outline"}
+        target="_blank">
         {users.button.text || "Get Started"}
       </Link>
     </div>
