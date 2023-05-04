@@ -18,8 +18,8 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       <Fragment slot="desc">Somos un pequeño equipo apasionado.</Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
+    <div class="flex flex-col gap-2 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-2xl text-gray-800">
         ¡Innovando el futuro, un paso a la vez!
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
@@ -29,7 +29,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         optimizar sus procesos y a los usuarios a mejorar su calidad de vida.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-12">
       {
         publishedTeamMembers.map((teamMemberEntry) => (
           <div class="group">
