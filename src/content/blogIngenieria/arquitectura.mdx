@@ -1,0 +1,41 @@
+---
+draft: true
+title: "Arquitectura del Software"
+snippet: "Se establece la arquitectura del software"
+publishDate: "2023-03-31 11:00"
+image: {
+  src: "https://i.imgur.com/LW9Vb3O.jpg",
+  alt: "Arquitectura"
+}
+category: "Cuarta Semana"
+author: "David A. Mora"
+tags: [Arquitectura, Software, blog]
+---
+
+
+
+import Button from "@components/ui/button.astro";
+
+La arquitectura de software proporciona una visión global del sistema, identificando los componentes principales, sus interacciones y las restricciones impuestas por el entorno.
+
+## <a name="Headings"></a>Arquitectura Inicial - Microservicios
+
+![Super wide](https://i.imgur.com/8zgFXVE.png)
+
+En un principio se planteo una arquitectura basada en microservicios, la cual se puede observar en la imagen anterior, pero debido a la complejidad que esto conlleva, se opto por una arquitectura monolitica.
+
+## Arquitectura Final - Monolitica
+
+![Super wide](https://i.imgur.com/MjZR20k.png)
+
+En la imagen anterior se puede observar la arquitectura final, la cual esta compuesta por un servidor web, el cual se encarga de servir los archivos estaticos y de redireccionar las peticiones al backend, el cual se encarga de realizar las operaciones correspondientes.
+
+Los servicios (Back y Front) se desplegaran en un servidores separados, los cuales se comunicaran a traves de peticiones HTTP/1.1
+
+## Diagrama de Despliegue
+
+![Super wide](https://i.imgur.com/rI5HQHM.png)
+
+Para el caso del front se escogio netlify como proveedor de servicios, el cual se encargara de servir los archivos estaticos, para el caso del backend se escogio render, el cual se encargara de servir el backend.
+
+Todo esto haciendo uso de practicas de integracion continua, para que cada vez que se realice un cambio en el repositorio, se despliegue automaticamente en los servidores.

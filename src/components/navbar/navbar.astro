@@ -21,14 +21,20 @@ const menuitems = [
     {
     title: "Home",
     path: "/",
+    children: '',
   },
   {
     title: "Nosotros",
     path: "/about",
+    children: '',
   },
   {
     title: "Blog",
-    path: "/blog",
+    path: "#",
+    children: [
+      { title: "Ing. de Software", path: "/blog-ingenieria" },
+      { title: "Análisis y diseño", path: "/blog-analisis" },
+    ],
   },
   // {
   //   title: "Contact",
@@ -42,8 +48,8 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Analis y </span><span
-            class="text-slate-500">Diseño</span
+          ><span class="text-slate-500">Ingeniería de </span><span
+            class="font-bold text-slate-800">Software</span
           >
         </a>
         <div class="block lg:hidden">
