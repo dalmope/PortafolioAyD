@@ -1,0 +1,37 @@
+---
+draft: false
+title: "Control de cambios"
+snippet: "Se realizó el control de cambios del proyecto."
+publishDate: "2023-10-02 11:00"
+image: {
+  src: "https://i.imgur.com/TFGQEdK.jpg",
+  alt: "Cambios"
+}
+category: "Quinta Semana"
+author: "David A. Mora"
+tags: [control, cambios, quinta]
+---
+
+import Pricing from "@components/bannertree.astro";
+
+
+
+export const work = [
+  {
+    price: "Control de cambios",
+    popular: true,
+    features: [],
+    button: {
+      text: "Revisar",
+      link: "/trabajos/ingeniera/Pert.pdf",
+    },
+    backgroundImageUrl: "https://i.imgur.com/od8TAGs.jpg",
+  }
+];
+
+
+Control de cambios
+
+<div class="grid md:grid-cols-1 mx-auto max-w-full">
+    {work.map((item) => <Pricing users={item} />)}
+</div>
