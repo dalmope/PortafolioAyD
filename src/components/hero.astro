@@ -26,12 +26,12 @@ import { Icon } from "astro-icon";
       Permitirá gestionar su Clínica o Gabinete Médico de una 
       manera cómoda y fácil gracias a su intuitivo diseño. 
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+    <div class="mt-6 flex flex-col sm:flex-row gap-4">
       <Link
         href="#features"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+        <Icon class="text-white w-5 h-5" name="bx:bxs-chevron-down-circle" />
 
         Conoce Más
       </Link>
@@ -39,11 +39,21 @@ import { Icon } from "astro-icon";
         size="lg"
         style="outline"
         rel="noopener"
-        href="#"
+        href="https://github.com/dalmope/Front-Clinica"
         class="flex gap-1 items-center justify-center">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        <Icon class="text-black w-4 h-4" name="bx:bxl-angular" />
+        Front Repo
       </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/dalmope/usermicroservice"
+        class="flex gap-1 items-center justify-center">
+        <Icon class="text-black w-4 h-4" name="bx:bxl-java" />
+        Back Repo
+    </Link>
+    
     </div>
   </div>
 </main>
