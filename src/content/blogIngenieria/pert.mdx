@@ -1,0 +1,37 @@
+---
+draft: false
+title: "Ejercicio PERT"
+snippet: "La técnica PERT es una herramienta que permite planificar, programar y controlar proyectos. PERT es un acrónimo de Program Evaluation and Review Technique (Técnica de Evaluación y Revisión de Programas)."
+publishDate: "2023-09-26 11:00"
+image: {
+  src: "https://i.imgur.com/eMqjUiQ.jpg",
+  alt: "Ejercicio PERT"
+}
+category: "Cuarta Semana"
+author: "David A. Mora"
+tags: [pert, herramienta, Ingeniería]
+---
+
+import Pricing from "@components/bannertree.astro";
+
+
+
+export const work = [
+  {
+    price: "Ejercicio PERT",
+    popular: true,
+    features: [],
+    button: {
+      text: "Revisar",
+      link: "/trabajos/ingeniera/Pert.pdf",
+    },
+    backgroundImageUrl: "https://i.imgur.com/od8TAGs.jpg",
+  }
+];
+
+
+Ejercicio PERT
+
+<div class="grid md:grid-cols-1 mx-auto max-w-full">
+    {work.map((item) => <Pricing users={item} />)}
+</div>
